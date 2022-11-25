@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        'top': '0 6px px -15px rgba(0, 0, 0, 0.3)',
+        'top': '0_6px_-10px_-15px_rgba(0, 0, 0, 0.3)',
       }
     },
   },

@@ -8,13 +8,13 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 
 }
 body{
   -webkit-tap-highlight-color:transparent;
-  @apply bg-no-repeat flex bg-contain bg-gradient-to-br from-lime-700 via-lime-600 to-lime-900;
+  @apply bg-no-repeat flex h-screen bg-contain bg-gradient-to-br from-lime-700 via-lime-600 to-lime-900;
 }
 
 
@@ -24,9 +24,54 @@ body{
   height: 0.34rem;
 }
 .slider::-webkit-slider-thumb {
-  @apply appearance-none h-4 w-4 bg-slate-50 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 rounded-full cursor-pointer;
+  @apply appearance-none h-4 w-4 bg-slate-50 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 opacity-90 rounded-full cursor-pointer;
 }
 .dark .slider {
 }
 
+.animated-banner {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+.animated-banner .banner {
+  display: inline-block;
+  animation: horizontal-text 12s linear infinite;
+}
+
+@keyframes horizontal-text {
+
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+
+
+
+
+/* width */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-slate-400/20;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-800/70;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-800/60;
+}
+}
+
